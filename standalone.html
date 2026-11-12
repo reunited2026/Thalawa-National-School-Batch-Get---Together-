@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REUNITED | 2022 O/L & 2025 A/L Thalawa National School</title>
+  
+  <!-- SEO & Social Sharing meta tags -->
+  <meta name="description" content="Official Web Invitation for Thalawa National School 2022 O/L & 2025 A/L Batch Get-Together - December 13 at Hotel Princess Garden Embilipitiya">
+  <meta property="og:title" content="REUNITED - 2022 O/L & 2025 A/L Batch Get-Together">
+  <meta property="og:description" content="Hotel Princess Garden Embilipitiya | Dec 13 | 08:00 A.M">
+  <meta property="og:image" content="ticket-banner.jpg">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Outfit:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-intro">
+
+  <!-- Laser / Spotlight Canvas Background -->
+  <canvas id="stageCanvas"></canvas>
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Audio Controls Floating Button -->
+  <div class="audio-control-wrapper" id="audioControl">
+    <button class="sound-btn" id="soundToggle" title="Toggle Party Beats & Music">
+      <div class="equalizer-bars" id="eqBars">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+        <span class="bar bar-4"></span>
+      </div>
+      <span class="sound-text" id="soundStatus">VIBE ON</span>
+    </button>
+  </div>
+
+  <!-- VIP Intro Gate Modal (Initial Curtain Entrance) -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-backdrop"></div>
+    <div class="intro-content">
+      <div class="intro-badge">
+        <i class="fa-solid fa-graduation-cap"></i> THALAWA NATIONAL SCHOOL
+      </div>
+      <div class="intro-batch-tag">2022 O/L & 2025 A/L</div>
+      <h1 class="intro-title glitch-text" data-text="REUNITED">REUNITED</h1>
+      <p class="intro-sub">The Most Awaited Batch Get-Together of the Decade!</p>
+      
+      <div class="intro-ticket-peek">
+        <img src="ticket-banner.jpg" alt="Reunited Invitation" class="peek-img">
+      </div>
+
+      <button class="enter-btn" id="enterBtn">
+        <span class="btn-shine"></span>
+        <span class="btn-glow"></span>
+        <span class="btn-text">
+          <i class="fa-solid fa-bolt-lightning"></i> ENTER THE EXPERIENCE
+        </span>
+      </button>
+      <p class="intro-hint">🔊 Best experienced with sound turned ON</p>
+    </div>
+  </div>
+
+  <!-- Main Web Invitation Container -->
+  <main class="main-wrapper" id="mainApp">
+
+    <!-- Top Navigation / Brand Bar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <span class="school-logo-badge"><i class="fa-solid fa-crown"></i></span>
+        <div class="brand-text">
+          <span class="school-name">THALAWA NATIONAL SCHOOL</span>
+          <span class="batch-text">2022 O/L & 2025 A/L BATCH</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="#rsvpSection" class="btn-nav-rsvp">
+          <i class="fa-solid fa-ticket"></i> <span>GET PASS</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-header">
+        <div class="hero-tag">
+          <span class="live-pulse"></span> OFFICIAL BATCH GET-TOGETHER INVITATION
+        </div>
+        <h1 class="hero-title">
+          <span class="title-sub">MEMORIES REKINDLED</span>
+          <span class="title-main neon-text">REUNITED</span>
+        </h1>
+        <p class="hero-description">
+          අතීතයේ මිහිරිම මතකයන් අලුත් කරගන්න, පාසල් මිතුරු මිතුරියන් සමගින් නැවත එකතු වන මහා සොඳුරු දවස! Let's celebrate our bond, youth, and endless memories.
+        </p>
+      </div>
+
+      <!-- 3D Interactive VIP Pass Card -->
+      <div class="ticket-container" id="ticketWrapper">
+        <div class="ticket-card" id="ticketCard">
+          
+          <!-- Card Front -->
+          <div class="ticket-face ticket-front">
+            <div class="ticket-inner">
+              <div class="ticket-hologram"></div>
+              
+              <!-- Ticket Top Header -->
+              <div class="ticket-top">
+                <div class="ticket-school">
+                  <i class="fa-solid fa-school"></i> THALAWA NATIONAL SCHOOL
+                </div>
+                <div class="ticket-batch-pill">2022 O/L & 2025 A/L</div>
+              </div>
+
+              <!-- Ticket Visual Center -->
+              <div class="ticket-visual">
+                <img src="ticket-banner.jpg" alt="REUNITED Batch Party" class="ticket-banner-img">
+                <div class="ticket-visual-overlay"></div>
+                <div class="ticket-watermark">VIP PASS</div>
+              </div>
+
+              <!-- Ticket Info Grid -->
+              <div class="ticket-info-grid">
+                <div class="info-block">
+                  <span class="info-label"><i class="fa-regular fa-calendar"></i> DATE</span>
+                  <span class="info-val">DECEMBER 13</span>
+                  <span class="info-sub">FRIDAY / ALL DAY</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-label"><i class="fa-regular fa-clock"></i> TIME</span>
+                  <span class="info-val">08:00 AM</span>
+                  <span class="info-sub">GATES OPEN</span>
+                </div>
+                <div class="info-block full-width">
+                  <span class="info-label"><i class="fa-solid fa-location-dot"></i> LOCATION</span>
+                  <span class="info-val highlight-gold">HOTEL PRINCESS GARDEN</span>
+                  <span class="info-sub">EMBILIPITIYA</span>
+                </div>
+              </div>
+
+              <!-- Ticket Stub / Perforation line -->
+              <div class="ticket-perforation">
+                <span class="notch notch-left"></span>
+                <span class="perf-line"></span>
+                <span class="notch notch-right"></span>
+              </div>
+
+              <!-- Ticket Bottom Stub -->
+              <div class="ticket-bottom">
+                <div class="ticket-price-box">
+                  <span class="price-label">ADMISSION</span>
+                  <span class="price-val">LKR 3,500</span>
+                  <span class="price-note">ALL-INCLUSIVE PASS</span>
+                </div>
+                <div class="ticket-barcode-box">
+                  <div class="barcode-graphic"></div>
+                  <span class="serial-code">#TNS-REUNITED-2225</span>
+                </div>
+              </div>
+
+              <!-- Flip Button Hint -->
+              <button class="btn-flip-card" id="flipCardBtn" title="Click to view event perks & details">
+                <i class="fa-solid fa-rotate"></i> Flip Details
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Card Back -->
+          <div class="ticket-face ticket-back">
+            <div class="ticket-inner">
+              <div class="back-header">
+                <h3><i class="fa-solid fa-star"></i> VIP PASS INCLUSIONS</h3>
+                <span class="badge-gold">ALL INCLUDED</span>
+              </div>
+
+              <ul class="inclusions-list">
+                <li><i class="fa-solid fa-circle-check"></i> Luxury Buffet Lunch with Desserts</li>
+                <li><i class="fa-solid fa-circle-check"></i> Welcome Drinks & Evening Tea</li>
+                <li><i class="fa-solid fa-circle-check"></i> High Voltage DJ & Live Sound Lights</li>
+                <li><i class="fa-solid fa-circle-check"></i> Studio Photography & Photo Booth</li>
+                <li><i class="fa-solid fa-circle-check"></i> Batch Games, Competitions & Surprises</li>
+                <li><i class="fa-solid fa-circle-check"></i> Exclusive Batch Souvenir / Memento</li>
+              </ul>
+
+              <div class="ticket-back-dresscode">
+                <div class="dresscode-title"><i class="fa-solid fa-shirt"></i> DRESS CODE</div>
+                <div class="dresscode-text">Smart Casual / Party Chic / Neon Glam</div>
+              </div>
+
+              <div class="ticket-perforation">
+                <span class="notch notch-left"></span>
+                <span class="perf-line"></span>
+                <span class="notch notch-right"></span>
+              </div>
+
+              <div class="back-contact-info">
+                <span>HOTEL PRINCESS GARDEN - EMBILIPITIYA</span>
+                <small>Non-transferable | Please present your Pass at entrance</small>
+              </div>
+
+              <button class="btn-flip-card back-flip" id="flipCardBtnBack">
+                <i class="fa-solid fa-rotate-left"></i> Back to Front
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Action Floating Pills -->
+      <div class="hero-actions">
+        <a href="#rsvpSection" class="action-btn primary-action">
+          <i class="fa-solid fa-ticket"></i> Reserve My Seat
+        </a>
+        <a href="https://maps.google.com/?q=Hotel+Princess+Garden+Embilipitiya" target="_blank" rel="noopener noreferrer" class="action-btn secondary-action">
+          <i class="fa-solid fa-map-location-dot"></i> View on Map
+        </a>
+        <button id="addToCalBtn" class="action-btn glass-action">
+          <i class="fa-regular fa-calendar-plus"></i> Add to Calendar
+        </button>
+      </div>
+    </section>
+
+    <!-- Live Neon Countdown Timer -->
+    <section class="countdown-section">
+      <div class="section-title-wrap">
+        <span class="neon-pill"><i class="fa-solid fa-hourglass-half"></i> THE COUNTDOWN BEGINS</span>
+        <h2 class="section-heading">Get Ready for the Craziest Day!</h2>
+      </div>
+
+      <div class="countdown-container" id="countdown">
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdDays">00</div>
+          <div class="countdown-label">DAYS</div>
+          <div class="box-glow"></div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdHours">00</div>
+          <div class="countdown-label">HOURS</div>
+          <div class="box-glow"></div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdMins">00</div>
+          <div class="countdown-label">MINUTES</div>
+          <div class="box-glow"></div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-box highlight-sec">
+          <div class="countdown-number" id="cdSecs">00</div>
+          <div class="countdown-label">SECONDS</div>
+          <div class="box-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights / Party Features Grid -->
+    <section class="features-section">
+      <div class="section-title-wrap">
+        <span class="neon-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> EVENT HIGHLIGHTS</span>
+        <h2 class="section-heading">What's Waiting For You?</h2>
+        <p class="section-sub">එදා දවස අමතක නොවන මතකයක් කරගන්න සූදානම් කර ඇති විශේෂාංග</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box pink-neon">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h3>Welcome & Red Carpet</h3>
+          <p>පැමිණෙන ඔබ සැම සිසිල් බීමකින් සහ Red Carpet ඡායාරූප සැසියකින් උණුසුම්ව පිළිගැනීම.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box purple-neon">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3>Live DJ & Dance Floor</h3>
+          <p>ලංකාවේ හොඳම DJ බීට්ස් සමගින් සැමට එකට නටන්න, විනෝද වෙන්න Full Dynamic Sound & Laser Lighting setup එකක්.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box cyan-neon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3>Grand Buffet Lunch</h3>
+          <p>Hotel Princess Garden හි රසවත්, ප්‍රණීත ආහාර රැසකින් සමන්විත සුපිරි Luxury Buffet දිවා ආහාරය සහ Desserts.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box gold-neon">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <h3>Pro Photography & Video</h3>
+          <p>වසර ගණනාවකට පසු හමුවන අපගේ යාළුකම ජීවිත කාලයටම මතකයේ රඳවන Professional Portrait & Batch Photo Shoot එකක්.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box green-neon">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3>Fun Games & Surprises</h3>
+          <p>ඉස්කෝලේ කාලේ කළ නොසන්ඩාලකම් මතක් කරවන හාස්‍යජනක තරඟ, තෑගි සහ විශේෂ Surprise Events.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon-box orange-neon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3>Batch Souvenir & Tokens</h3>
+          <p>2022 O/L & 2025 A/L Batch එක වෙනුවෙන්ම නිර්මාණය කළ සමරු සිහිවටනයක් සහ විශේෂ මතකයන්.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule / Timeline Section -->
+    <section class="timeline-section">
+      <div class="section-title-wrap">
+        <span class="neon-pill"><i class="fa-solid fa-clock"></i> AGENDA</span>
+        <h2 class="section-heading">The Day's Line-Up</h2>
+        <p class="section-sub">2026 දෙසැම්බර් 13 වනදා සැලසුම</p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">08:00 AM - 09:00 AM</div>
+          <div class="timeline-content glass-panel">
+            <h4><i class="fa-solid fa-door-open"></i> Arrival & Red Carpet Entry</h4>
+            <p>Welcome drinks, registration badge check-in, and instant squad photos at the grand photo booth.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">09:00 AM - 10:30 AM</div>
+          <div class="timeline-content glass-panel">
+            <h4><i class="fa-solid fa-graduation-cap"></i> School Anthem & Opening Tribute</h4>
+            <p>Honoring our school, teachers, and nostalgic video rewind of our school days memories.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">10:30 AM - 12:30 PM</div>
+          <div class="timeline-content glass-panel">
+            <h4><i class="fa-solid fa-trophy"></i> Batch Games, Roasting & Fun Stage</h4>
+            <p>Exciting competitions, musical games, funny awards, and open mic memory shares.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">12:30 PM - 02:00 PM</div>
+          <div class="timeline-content glass-panel">
+            <h4><i class="fa-solid fa-bowl-food"></i> Luxury Buffet Lunch</h4>
+            <p>Grand feast at Hotel Princess Garden with delightful desserts and chit-chat tables.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot highlight-pulse"></div>
+          <div class="timeline-time">02:00 PM - 05:00 PM</div>
+          <div class="timeline-content glass-panel highlight-border">
+            <h4><i class="fa-solid fa-bolt"></i> High Energy DJ & Dance Party</h4>
+            <p>Non-stop music, bass drops, party tracks, and the ultimate Thalawa dance floor madness!</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">05:00 PM - 05:30 PM</div>
+          <div class="timeline-content glass-panel">
+            <h4><i class="fa-solid fa-camera"></i> Grand Batch Group Photo & Farewell</h4>
+            <p>Official all-batch panoramic photo, souvenir distribution, and wishing each other bright futures.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Venue & Location Section -->
+    <section class="venue-section">
+      <div class="section-title-wrap">
+        <span class="neon-pill"><i class="fa-solid fa-hotel"></i> THE VENUE</span>
+        <h2 class="section-heading">Hotel Princess Garden</h2>
+        <p class="section-sub">Embilipitiya | The Best Luxury Destination for Our Reunion</p>
+      </div>
+
+      <div class="venue-card glass-panel">
+        <div class="venue-info">
+          <div class="venue-detail-row">
+            <span class="icon-circle"><i class="fa-solid fa-location-crosshairs"></i></span>
+            <div>
+              <strong>Address:</strong>
+              <p>Hotel Princess Garden, Pallegama Road, Embilipitiya</p>
+            </div>
+          </div>
+          <div class="venue-detail-row">
+            <span class="icon-circle"><i class="fa-solid fa-calendar-check"></i></span>
+            <div>
+              <strong>Date & Time:</strong>
+              <p>December 13 | 08:00 AM Onwards</p>
+            </div>
+          </div>
+          <div class="venue-detail-row">
+            <span class="icon-circle"><i class="fa-solid fa-parking"></i></span>
+            <div>
+              <strong>Facilities:</strong>
+              <p>Fully Air-Conditioned Banquet Hall, Spacious Parking, Swimming Pool view & Photo Garden</p>
+            </div>
+          </div>
+
+          <div class="venue-actions">
+            <a href="https://maps.google.com/?q=Hotel+Princess+Garden+Embilipitiya" target="_blank" class="btn-location">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions (Google Maps)
+            </a>
+          </div>
+        </div>
+
+        <div class="venue-map-embed">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.339234125866!2d80.8400!3d6.3000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae408a28062b161%3A0xe6bf44b9d03c6218!2sHotel%20Princess%20Garden!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" 
+            width="100%" 
+            height="280" 
+            style="border:0; border-radius: 16px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP & Pass Generator Form -->
+    <section class="rsvp-section" id="rsvpSection">
+      <div class="section-title-wrap">
+        <span class="neon-pill"><i class="fa-solid fa-ticket-simple"></i> RESERVATION</span>
+        <h2 class="section-heading">Confirm Your Attendance</h2>
+        <p class="section-sub">ඔබේ නම ලියාපදිංචි කර Instant Digital E-Pass එක ලබා ගන්න</p>
+      </div>
+
+      <div class="rsvp-card glass-panel">
+        <form id="rsvpForm" class="rsvp-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName"><i class="fa-regular fa-user"></i> Full Name (නම) *</label>
+              <input type="text" id="fullName" required placeholder="e.g. Kasun Chamara" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="batchSelect"><i class="fa-solid fa-users"></i> Your Batch *</label>
+              <select id="batchSelect" required>
+                <option value="2022 O/L & 2025 A/L">2022 O/L & 2025 A/L (Both)</option>
+                <option value="2022 O/L Batch">2022 O/L Batch</option>
+                <option value="2025 A/L Batch">2025 A/L Batch</option>
+                <option value="Guest / Well-wisher">Guest / School Friend</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phoneNum"><i class="fa-solid fa-phone"></i> Contact / WhatsApp Number *</label>
+              <input type="tel" id="phoneNum" required placeholder="07X XXX XXXX" pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group">
+              <label for="foodPref"><i class="fa-solid fa-utensils"></i> Meal Preference</label>
+              <select id="foodPref">
+                <option value="Non-Vegetarian (Chicken/Fish)">Non-Vegetarian (Standard Buffet)</option>
+                <option value="Vegetarian">Vegetarian Special</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="specialNote"><i class="fa-regular fa-message"></i> A Message to Your Batchmates (Optional)</label>
+            <input type="text" id="specialNote" placeholder="e.g. Can't wait to see everyone after so long!">
+          </div>
+
+          <div class="form-pricing-notice">
+            <div class="notice-item">
+              <i class="fa-solid fa-circle-info"></i> Ticket Fee: <strong>LKR 3,500/=</strong> (Payable to the committee / at entrance)
+            </div>
+          </div>
+
+          <button type="submit" class="submit-pass-btn">
+            <span class="btn-shine"></span>
+            <i class="fa-solid fa-id-card-clip"></i> GENERATE MY OFFICIAL PASS
+          </button>
+        </form>
+
+        <!-- Generated Pass Modal / Display Area -->
+        <div class="epass-result hidden" id="epassResult">
+          <div class="pass-success-banner">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>RESERVATION CONFIRMED!</h3>
+            <p>Your VIP digital access pass is ready:</p>
+          </div>
+
+          <div class="custom-epass" id="customEpass">
+            <div class="epass-glow"></div>
+            <div class="epass-header">
+              <span class="pass-school">THALAWA NATIONAL SCHOOL</span>
+              <span class="pass-batch">REUNITED • DEC 13</span>
+            </div>
+            
+            <div class="epass-body">
+              <div class="epass-attendee">
+                <span class="lbl">ATTENDEE NAME</span>
+                <span class="val name-val" id="passName">Kasun Chamara</span>
+              </div>
+              <div class="epass-meta-grid">
+                <div>
+                  <span class="lbl">BATCH</span>
+                  <span class="val" id="passBatch">2022 O/L & 2025 A/L</span>
+                </div>
+                <div>
+                  <span class="lbl">TICKET NO</span>
+                  <span class="val text-gold" id="passTicketNo">TNS-8492</span>
+                </div>
+              </div>
+              <div class="epass-venue-line">
+                <i class="fa-solid fa-location-dot"></i> Hotel Princess Garden, Embilipitiya
+              </div>
+            </div>
+
+            <div class="epass-footer">
+              <div class="epass-qr" id="epassQrCode">
+                <!-- SVG QR Code Mockup -->
+                <svg viewBox="0 0 100 100" width="70" height="70" fill="currentColor">
+                  <path d="M0,0 h30 v30 h-30 z M5,5 v20 h20 v-20 z M10,10 h10 v10 h-10 z" />
+                  <path d="M70,0 h30 v30 h-30 z M75,5 v20 h20 v-20 z M80,10 h10 v10 h-10 z" />
+                  <path d="M0,70 h30 v30 h-30 z M5,75 v20 h20 v-20 z M10,80 h10 v10 h-10 z" />
+                  <rect x="40" y="10" width="8" height="20" />
+                  <rect x="15" y="40" width="20" height="8" />
+                  <rect x="50" y="45" width="20" height="15" />
+                  <rect x="75" y="50" width="15" height="15" />
+                  <rect x="40" y="75" width="20" height="8" />
+                  <rect x="75" y="80" width="15" height="15" />
+                </svg>
+              </div>
+              <div class="epass-status">
+                <span class="status-verified"><i class="fa-solid fa-shield-halved"></i> VERIFIED GUEST</span>
+                <span class="price-confirmed">LKR 3,500</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="epass-share-actions">
+            <button class="btn-action-small" id="btnDownloadPass">
+              <i class="fa-solid fa-camera"></i> Save Screenshot / Pass
+            </button>
+            <button class="btn-action-small btn-wa" id="btnShareWhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> Share on WhatsApp
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Social Share & Contact Section -->
+    <section class="connect-section">
+      <div class="social-share-card glass-panel">
+        <div class="share-info">
+          <h3><i class="fa-solid fa-bullhorn"></i> Spread the Word!</h3>
+          <p>අපේ පන්තියේ, අපේ බැච් එකේ හැමෝටම මේ ආරාධනාව share කරලා එකතු කරගන්න.</p>
+        </div>
+        <div class="share-buttons">
+          <a id="waDirectShare" href="#" target="_blank" class="share-btn wa-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Group Share
+          </a>
+          <button id="copyInviteLink" class="share-btn copy-btn">
+            <i class="fa-solid fa-link"></i> <span id="copyLinkText">Copy Link</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Organizing Committee Hotlines -->
+      <div class="committee-card glass-panel">
+        <h3 class="comm-title"><i class="fa-solid fa-headset"></i> Organizing Committee & Hotline</h3>
+        <p class="comm-sub">වැඩිදුර තොරතුරු සහ ටිකට්පත් වෙන්කරවා ගැනීම සඳහා අමතන්න:</p>
+        <div class="contacts-grid">
+          <a href="tel:0771234567" class="contact-pill">
+            <i class="fa-solid fa-phone-volume"></i> 077 - 123 4567
+          </a>
+          <a href="tel:0712345678" class="contact-pill">
+            <i class="fa-solid fa-phone-volume"></i> 071 - 234 5678
+          </a>
+          <a href="https://wa.me/" target="_blank" class="contact-pill wa">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Support
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-content">
+        <div class="footer-logo">REUNITED 2026</div>
+        <p>Thalawa National School • 2022 O/L & 2025 A/L Grand Batch Reunion</p>
+        <p class="copyright">Hotel Princess Garden, Embilipitiya • December 13</p>
+        <div class="made-with-love">
+          Crafted with <i class="fa-solid fa-heart beat"></i> for the Thalawa Batchmates
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Confetti Canvas (for celebration burst) -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Sound Synth and Logic Script -->
+  <script src="script.js"></script>
+</body>
+</html>
